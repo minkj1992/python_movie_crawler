@@ -41,8 +41,12 @@ README.md  venv
     (venv) minkj1992@minkj1992-900X5L:~/code/python_movie_crawler$ deactivate 
 
 
-
-
+## Crawler
+- `select()`
+- `find_parent()`
+- `get_text()`
+- `find_parent()`
+    - `find_parent("div", class_="info-movie")`
 
 ## ETC
 git 최신 commit 삭제
