@@ -53,21 +53,30 @@ README.md  venv
 - `find_parent()`
     - `find_parent("div", class_="info-movie")`
 
-`default_location` = "광교 상현 CGV"
-`movie_crawling_by_age.py`: 오늘 날짜에 대한 영화목록 중, 15세 이상 영화들을 검색하여 내보내준다.
-`movie_crawling_by_genre.py`: 오늘 날짜에 대한 영화목록들과 genre를 보내준다. 
+- `default_location` = "광교 상현 CGV"
+- `movie_crawling_by_age.py`: 오늘 날짜에 대한 영화목록 중, 15세 이상 영화들을 검색하여 내보내준다.
+- `movie_crawling_by_genre.py`: 오늘 날짜에 대한 영화목록들과 genre를 보내준다. 
 
 ### telegram bot
 
 크롤링 데이터들을 모아서, config.json파일에 기입된 telegram 토큰으로 데이터를 send, get 할 수 있다.
+
 중간에 날짜에 대한 CACHE를 두어 크롤링은 하루에 1번만 진행된다. 
+
+### APScheduler
+
+시간 단위로 event 발생시키기
 
 ### AWS EC2
 
+백그라운드로 파이썬 파일 실행시키기 (터미널 종료후에도 프로세스 유지)
+
+    nohub python3 telegram_bot.py &
 
 ## ETC
 git 최근 add 취소
-
+    
+    venv) minkj1992@minkj1992-900X5L:~/code/python_movie_crawler$ git reset HEAD
 
 git 최신 commit 삭제
 
