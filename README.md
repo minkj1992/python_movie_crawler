@@ -13,8 +13,13 @@
 5. [파이썬으로 서버를 극한까지 끌어다 쓰기](https://www.youtube.com/watch?v=zAvWv_Wi0z0)
 6. [파이썬 중급](https://www.inflearn.com/course/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%B0%8D-%ED%8C%8C%EC%9D%B4%EC%8D%AC-%EC%A4%91%EA%B8%89-%EC%9D%B8%ED%94%84%EB%9F%B0-%EC%98%A4%EB%A6%AC%EC%A7%80%EB%84%90)
 
+## 실행 방법
+1) `telegram`에 ``
+`telegram_bot.py`를 통해 crawling이 시작된다.
 
-## 1. pyvenv를 활용한 내장 가상환경 설정
+## 개발과정
+
+### 1. pyvenv를 활용한 내장 가상환경 설정
 
 `sudo apt-get install -y python3-venv`는 Deppricated된 방식이다.
 
@@ -41,14 +46,29 @@ README.md  venv
     (venv) minkj1992@minkj1992-900X5L:~/code/python_movie_crawler$ deactivate 
 
 
-## Crawler
+### Crawler
 - `select()`
 - `find_parent()`
 - `get_text()`
 - `find_parent()`
     - `find_parent("div", class_="info-movie")`
 
+`default_location` = "광교 상현 CGV"
+`movie_crawling_by_age.py`: 오늘 날짜에 대한 영화목록 중, 15세 이상 영화들을 검색하여 내보내준다.
+`movie_crawling_by_genre.py`: 오늘 날짜에 대한 영화목록들과 genre를 보내준다. 
+
+### telegram bot
+
+크롤링 데이터들을 모아서, config.json파일에 기입된 telegram 토큰으로 데이터를 send, get 할 수 있다.
+중간에 날짜에 대한 CACHE를 두어 크롤링은 하루에 1번만 진행된다. 
+
+### AWS EC2
+
+
 ## ETC
+git 최근 add 취소
+
+
 git 최신 commit 삭제
 
     (venv) minkj1992@minkj1992-900X5L:~/code/python_movie_crawler$ git reset HEAD^
